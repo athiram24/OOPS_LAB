@@ -10,11 +10,7 @@ class CPU
         {
             int size;
             String manufacturer_RAM;
-            public void display()
-            {
-                System.out.println("CPU Price:"+ O.price);
-            }
-
+           
         }
 
     }
@@ -23,21 +19,25 @@ class Computer
 {
     public static void main(String arg[])
     {
-        Scanner inp = new Scanner(System.in);
-        // CPU o = new CPU();
-        CPU.Processor.RAM  O = new CPU.Processor.RAM();
-        System.out.println("Enter the price of CPU:");
-        O.price = inp.nextInt();
-        //CPU.Processor o1 =  x.new Processor();
-        System.out.println("Enter the number of cores:");
-        O.cores = inp.nextInt();
-        System.out.println("Enter the manufacturer of Processor:");
-        O.manufacturer = inp.next();
-       // CPU.Processor.RAM o2 = new CPU.Processor.RAM();
-        System.out.println("Enter the size of RAM:");
-        O.size = inp.nextInt();
-        System.out.println("Enter the manufcturer of RAM:");
-        O.manufacturer_RAM = inp.next();
+            Scanner inp = new Scanner(System.in);
+            CPU cpu = new CPU();
+            System.out.println("Enter the price of CPU:");
+            cpu.price = inp.nextInt();
+            CPU.Processor pro =    cpu.new Processor();
+            System.out.println("Enter the number of cores:");
+            pro.cores = inp.nextInt();
+            System.out.println("Enter the manufacturer of Processor:");
+            pro.manufacturer = inp.next();
+            CPU.Processor.RAM ram = new CPU.Processor.RAM();
+            System.out.println("Enter the size of RAM:");
+            ram.size = inp.nextInt();
+           System.out.println("Enter the manufcturer of RAM:");
+           ram.manufacturer_RAM = inp.next();
+           System.out.println("PRICE :"+ cpu.price);
+           System.out.println("No of Cores :"+ pro.cores);
+           System.out.println("Manufacturer_Processor :"+ pro.manufacturer);
+           System.out.println("RAM size :"+ ram.size);
+           System.out.println("Manufacturer_RAM :"+ ram.manufacturer_RAM);
 
 
 
