@@ -12,10 +12,8 @@ class Checksymmetric{
                     flag = true;
                     break;
                 }
-
             }
         }
-        
         if(flag == true){
             System.out.println("The given matrix is not  symmetric:");
         }
@@ -28,12 +26,10 @@ class Checksymmetric{
     public static void main(String arg[])
     {
         Scanner  sc = new Scanner(System.in);
-        System.out.println("Enter the no of rows:");
+        System.out.println("Enter the no of rows and coloumns:");
         int r = sc.nextInt();
-        System.out.println("Enter the no of coloumns:");
         int c = sc.nextInt();
-       
-         int a[][] = new int[r][c];
+        int a[][] = new int[r][c];
         System.out.println("Enter the array elements:");
         for(int i =0;i<a.length;i++)
         {
@@ -44,6 +40,5 @@ class Checksymmetric{
         }
         Checksymmetric o = new Checksymmetric();
         o.sym(a);
-    
     }
  }
