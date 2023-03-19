@@ -1,10 +1,28 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class sort_str 
+ class Stringsorter
+ {
+    String[] str;
+    
+  
+ Stringsorter(String str[])
+  {
+     this.str= str;
+    
+
+ }
+ public void sorting()
 {
+        String str2[] = Arrays.copyOf(str,str.length);
+        Arrays.sort(str2);
+        System.out.println("\nAfter sorting:");
+        for(int i=0;i<str.length;i++)
+        {
+            System.out.print("\t" +str2[i]);
+        }
 
 
-
+}
 }
 class main
 {
@@ -12,11 +30,24 @@ class main
     {
 
         Scanner inp = new Scanner(System.in);
-        System.out.println("Enter a string:");
-        String str = inp.nextLine();
-        System.out.println("Before sorting:" + str);
-        sort_str obj = new sort_str(str);
-        System.out.println("After sorting:" + );
+        System.out.println("Enter the number of strings to inserted:");
+        int n = inp.nextInt();
+        String s[] = new String[n];
+        System.out.println("Enter the strings:");
+        for(int i =0;i<n;i++)
+        {
+            s[i] = inp.next();
+        }
+        
+        System.out.println("Before sorting:");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("\t"+s[i]);
+        }
+        Stringsorter obj = new Stringsorter(s);
+        obj.sorting();
+      
+        //
 
 
 
