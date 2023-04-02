@@ -5,13 +5,15 @@ class Employee
     String Empname;
     Float Salary;
     String Address;
-    public Employee(EmpId,Empname,Salary,Address)
-    {
-        this.EmpId = EmpId;
-        this.Empname = Empname;
-        this.Salary = Salary;
-        this.Address = Address;
+    
+    public Employee(int empId, String empname, Float salary, String address) {
+        EmpId = empId;
+        Empname = empname;
+        Salary = salary;
+        Address = address;
+    }
 
+    public Employee() {
     }
 
 
@@ -20,9 +22,26 @@ class Teacher extends Employee
 {
     String dept;
     String sub;
+    
+    
+    public Teacher(int EmpId, String Empname, float Salary, String Address, String dept, String sub)
+     {
+        super(EmpId, Empname, Salary, Address);
+        this.dept = dept;
+        this.sub = sub;
+    }
+
+
+    public Teacher(String dept, String sub)
+     {
+        this.dept = dept;
+        this.sub = sub;
+    }
+
+
     public void display()
     {
-        System.out.println("Details:");
+       
         System.out.println("EmpId:"+EmpId);
         System.out.println("Empname:"+Empname);
         System.out.println("Salary:"+Salary);
@@ -40,24 +59,37 @@ class Main
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the number of employees:");
         int n = in.nextInt();
-        Employee [] emp = Employee[n];
+        Teacher[] t = new Teacher[n];
         System.out.println("Enter the details:\n");
         for(int i =0;i<n;i++)
         {
-            emp[i] = new Employee();
-            System.out.println("Enter the Empid,Empname,Salary,Address,Department,Subject");
+           
+            System.out.println("Enter the Empid,Empname,Salary");
             int empid = in.nextInt();
-            
-
-
-            int 
+            String empname = in.next();
+            float salary = in.nextFloat();
+            in.nextLine();
+            System.out.println("Enter the Address,Department,Subject:");
+            String address = in.nextLine();
+            String dep = in.nextLine();
+            String sub = in.nextLine();
+            t[i] = new Teacher(empid,empname,salary,address,dep,sub);
         }
+        System.out.println("\nDetails:\n");
+        for(int i=0;i<n;i++)
+        
+            t[i].display();
+            System.out.println("");
+        
+
+           
+     }
        
 
 
 
 
 
-    }
-    
 }
+    
+
