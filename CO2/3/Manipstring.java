@@ -3,21 +3,42 @@ class Functions
 {
     public int Length(String str)
     {
-        return Length(str);
-    }
-    public void Stringreverse(String str)
-    {
-        //String revstr = reve
+        return str.length();
     }
     public String Substrings(String s1,int index1,int index2)
     {
          return s1.substring(index1,index2);
     }
-    public String Concatenation(String s1,String s2)
+    public void Concatenation(String s1,String s2)
     {
-        return s1.concat(s2);
+        String str =  s1.concat(s2);
+        System.out.println("The resultant string is:" + str);
     }
-
+    public void Uppercase(String str)
+    {
+        System.out.println("Uppercase of the given string is "+str.toUpperCase());
+    }
+    public void Lowercase(String str)
+    {
+        System.out.println("Lowecase of the given string is "+str.toLowerCase());
+    }
+    public void Stringcompare(String s1, String s2)
+    {
+        if(s1.equals(s2))
+        System.out.println("Both are equal");
+        else
+        System.out.println("Not same:");
+    }
+    public void Stringsplit(String str)
+    {
+        String[] arrOfStr = str.split("@");
+        for (String a : arrOfStr)
+            System.out.println(a);
+    }
+    public void Stringreplace(String str,char s1,char s2)
+    {
+        System.out.println("Replace is:"+ str.replace(s1,s2));
+    }
 
 
 }
@@ -25,84 +46,73 @@ class Manipstring
 {
     public static void main(String a[])
     {
-    
+        int c;
+        String str;
         Scanner Sc = new Scanner(System.in);
-        System.out.println("Enter your choice:\n1.String Length\n2.String Reverse\n3.Substring\n4.Concatenation\n");
-        System.out.println("5.Uppercase Convertion\n6.Lowercase Conversion\n7.String Comparison\n8.Split\n9.Stringreplace\n");
-        int c = Sc.nextInt();
         Functions O = new Functions();
+        System.out.println("Enter a string:");
+        str = Sc.next();
+        do
+        {
+        System.out.println("Enter your choice:\n1.String Length\n2.Substring\n3.Concatenation");
+        System.out.print("4.Uppercase Convertion\n5.Lowercase Conversion\n6.String Comparison\n7.Split\n8.String replace\n");
+        c = Sc.nextInt();
         switch(c)
         {
-            case 1:{    
-                        System.out.println("Enter a String:");
-                        String str = Sc.nextLine();
+            case 1:{
                         int len = O.Length(str);
-                        System.out.println("Length of the given sring is:"+len);
+                        System.out.println("Length of the given string is:"+len);
                         break;
 
                    }
-            case 2:{    
-                        System.out.println("Enter a string:");
-                        String str = Sc.nextLine();
-                        O.Stringreverse(str);
-                        break;
-                    }
-            case 3:{
-                        System.out.println("Enter a string:");
-                        String s1 = Sc.nextLine();
+
+            case 2:{
                         System.out.println("Enter the starting and ending index:");
                         int index1 = Sc.nextInt();
                         int index2 = Sc.nextInt();
-                        String str = O.Substrings(s1,index1,index2);
-                        System.out.println("Substring is:"+str);
+                        String str1 = O.Substrings(str,index1,index2);
+                        System.out.println("Substring is:"+str1);
                         break;
                     }
-            case 4:{
-                        System.out.println("Enter the first string:");
-                        String s1 = Sc.nextLine();
+            case 3:{
                         System.out.println("Enter the second string:");
-                        String s2 = Sc.nextLine();
-                        O.Concatenation(s1,s2);
+                        String str1 = Sc.next();
+                        O.Concatenation(str,str1);
                         break;
 
                     }
-            case 5:{
-                        System.out.println("Enter a string:");
-                        String str = Sc.nextLine();
+            case 4:{
                         O.Uppercase(str);
                         break;
                     }
-            case 6:{
-                        System.out.println("Enter a string:");
-                        String str = Sc.nextLine();
+            case 5:{
                         O.Lowercase(str);
                         break;
                     }
-            case 7:{
-                        System.out.println("Enter the first string:");
-                        String s1 = Sc.nextLine();
-                        System.out.println("Enter the second string:");
-                        String s2 = Sc.nextLine();
-                        O.Stringcompare(s1,s2);
+            case 6:{
+                        System.out.println("Enter the second string to compare:");
+                        String str1 = Sc.next();
+                        O.Stringcompare(str,str1);
                         break;
 
                     }
-            case 8:{
-                        System.out.println("Enter a string:");
-                        String str = Sc.nextLine();
+            case 7:{
                         O.Stringsplit(str);
                         break;
                    }
-            case 9:{
-                        System.out.println("Enter a string:");
-                        String str = Sc.nextLine();
-                        System.out.println("Enter the replace:");
-                        String rep = Sc.nextline();
-                        O.Stringreplace(str,rep);
+            case 8:{
+                        System.out.println("Enter the character to be replaced :");
+                        char rep = Sc.next().charAt(0);
+                        System.out.println("Enter the character to be replaced with:");
+                        char repl = Sc.next().charAt(0);
+                        O.Stringreplace(str,rep,repl);
                         break;
                     }
-
-        }
+            default: System.out.println("Invalid choice:");
+                   
+            
+            }
+        }while(c!=0);
         
     }
 }
