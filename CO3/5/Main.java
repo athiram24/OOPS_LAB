@@ -3,50 +3,46 @@ class Student
 {
     int rollno;
     String name;
-    Float mark;
-    public Student(int rollno, String name, Float mark) {
+    int mark;
+    public Student(int rollno, String name, int mark)
+     {
         this.rollno = rollno;
         this.name = name;
         this.mark = mark;
     }
-    void display()
-    {
-        System.out.println("Rollno:"+rollno+"\nName:"+name+"\nMark:"+mark);
-    }
-    
+   
 }
-class Sports
+class Sports extends Student
 {
-    int sportsid;
+    String sportsid;
     int  score;
-    Sports(int sportsid, int score)
-     {
+    public Sports(int rollno, String name, int mark, String sportsid, int score) {
+        super(rollno, name, mark);
         this.sportsid = sportsid;
         this.score = score;
     }
-    public void display()
-    {
-        System.out.println("Sports Id:"+sportsid+"\nScore:"+score);
-    }
+    
     
 }
-class Result extends Student , Sports
+class Result extends Sports
 {
-    //int Totalscore;
-      Result(int rollno, String name, Float mark,int sportsid,int score)
-    {
-    super(rollno, name, mark);
-    Sports s = new Sports(sportsid,score);
-    
-    //this.Totalscore = Tot_score;
-
-   }
-   void display()
+   public Result(int rollno, String name, int mark, String sportsid, int score) 
    {
-    super.display();
-    //s.display();
+        super(rollno, name, mark, sportsid, score);
+        
+        
+    }
+
+void display()
+   {
+      
+    
+        System.out.println("Sports Id:"+sportsid+"\tScore:"+score);
+        System.out.println("Rollno:" +rollno+"\t\tMark:"+mark);
+    
+        
    }
-}
+} 
 
 
 class Main
@@ -54,10 +50,14 @@ class Main
    public static void main(String a[])
    {
     Scanner sc = new Scanner(System.in);
-    Result r = new Result(1,"Adhi", 34.05f,23,56);
+    System.out.println("Enter the Rollno,Name,Marks to be included in academics:");
+    int rollno = sc.nextInt();
+    String name = sc.next();
+    int mark = sc.nextInt();
+    System.out.println("Enter the sports name and score :");
+    String sport_name = sc.next();
+    int score = sc.nextInt();
+    Result r = new Result(rollno,name,mark,sport_name,mark);
     r.display();
-    
-    
-    
 }
 }
