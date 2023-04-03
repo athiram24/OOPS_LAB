@@ -25,7 +25,8 @@ class Checksymmetric
         }
     } 
 }
- class Symmetric {
+ class Symmetric 
+ {
     public static void main(String arg[])
     {
         Scanner  sc = new Scanner(System.in);
