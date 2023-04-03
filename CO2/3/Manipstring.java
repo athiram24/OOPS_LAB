@@ -20,7 +20,7 @@ class Functions
     }
     public void Lowercase(String str)
     {
-        System.out.println("Lowecase of the given string is "+str.toLowerCase());
+        System.out.println("Lowercase of the given string is "+str.toLowerCase());
     }
     public void Stringcompare(String s1, String s2)
     {
