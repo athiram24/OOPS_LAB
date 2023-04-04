@@ -1,23 +1,24 @@
 import java.util.Scanner;
 class Overload
 {
-    public int area(int s)
+    public int area(int s)//square
     {
         return s*s;
     }
-    public void area(int a,int b)
+    public void area(int a,int b)//rectangle
     {
         System.out.println("Area = "+a*b);
     }
-    public void area(int a,int b,int c)
+    public void area(int a,int b,int c)//cuboid
     {
         System.out.println("Area = "+ a*b*c);
     }
-    public float area(float r)
+    public float area(float r)//circle
+
     {
         return 3.14f*r*r;
     }
-    public void area(float l,float b)
+    public void area(float l,float b)//triangle
     {
         System.out.println("Area = "+0.5*l*b);
     }

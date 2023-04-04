@@ -36,9 +36,10 @@ class Result extends Sports
 void display()
    {
       
-    
+        System.out.println("Name:"+ name);
         System.out.println("Sports Id:"+sportsid+"\tScore:"+score);
         System.out.println("Rollno:" +rollno+"\t\tMark:"+mark);
+        System.out.println("Total score :"+((int)score+(int)mark));
     
         
    }
@@ -52,12 +53,13 @@ class Main
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter the Rollno,Name,Marks to be included in academics:");
     int rollno = sc.nextInt();
-    String name = sc.next();
+    //sc.next();
+    String name = sc.nextLine();
     int mark = sc.nextInt();
     System.out.println("Enter the sports name and score :");
     String sport_name = sc.next();
     int score = sc.nextInt();
-    Result r = new Result(rollno,name,mark,sport_name,mark);
+    Result r = new Result(rollno,name,mark,sport_name,score);
     r.display();
 }
 }
