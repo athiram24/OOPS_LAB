@@ -13,8 +13,6 @@ class Main
              s[i] = sc.next();
         Arrays.sort(s);
         System.out.println( Arrays.toString(s));
-        
-       
         sc.close();
     }
 }
