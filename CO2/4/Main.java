@@ -8,7 +8,6 @@ class Employee
     {
         System.out.println("Displaying details:");
         System.out.println("EmpId:" + Empid+ "\nEmpName:"+ Empname+"\nSalary:"+Salary);
-      
     }
 }
 class Main
@@ -30,9 +29,6 @@ class Main
             emp[i].Empname = sc.next();
             System.out.println("Enter the Salary:");
             emp[i].Salary = sc.nextFloat();
-
-
-            
         }
         System.out.println("Enter the employee Id to be searched:");
         int item = sc.nextInt();
@@ -50,7 +46,7 @@ class Main
         if(!flag)   
          {
             System.out.println("Not found");
-        } 
+         } 
 
     }
 }

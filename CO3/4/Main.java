@@ -6,9 +6,7 @@ class Publisher
     public Publisher(String publisher_name)
      {
         this.publisher_name = publisher_name;
-    }
-
-    
+    } 
 }
 class Book extends Publisher
 {
@@ -25,10 +23,6 @@ class Book extends Publisher
     {
         System.out.println("---------\nPublisher Name:"+publisher_name+"\nTitle:" +Title+"\nAuthor:"+Author+"\nPrice :"+price);
     }
-
-   
-    
-
 }
 class Literature extends Book
 {
@@ -47,10 +41,6 @@ class Literature extends Book
         super.display();
         System.out.print("Literature type:"+literature_type +"\nLanguage :"+language+"\n-----------");
     }
-
-   
-
-
 }
 class Fiction extends Book
 {
@@ -69,10 +59,6 @@ class Fiction extends Book
             System.out.println("Name :" + name + "\n Genre :" +Genre+"\n--------");
 
     }
-
-    
-    
-
 }
 class Main
 {
@@ -116,9 +102,5 @@ class Main
 
        }
      }while(c!=0);
-    
-
-
-   
     }
 }
