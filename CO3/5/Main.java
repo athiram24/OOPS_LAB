@@ -10,7 +10,6 @@ class Student
         this.name = name;
         this.mark = mark;
     }
-   
 }
 class Sports extends Student
 {
@@ -21,31 +20,22 @@ class Sports extends Student
         this.sportsid = sportsid;
         this.score = score;
     }
-    
-    
 }
 class Result extends Sports
 {
    public Result(int rollno, String name, int mark, String sportsid, int score) 
    {
         super(rollno, name, mark, sportsid, score);
-        
-        
     }
 
 void display()
    {
-      
         System.out.println("Name:"+ name);
         System.out.println("Sports Id:"+sportsid+"\tScore:"+score);
         System.out.println("Rollno:" +rollno+"\t\tMark:"+mark);
-        System.out.println("Total score :"+((int)score+(int)mark));
-    
-        
+        System.out.println("Total score :"+((int)score+(int)mark));    
    }
 } 
-
-
 class Main
 {
    public static void main(String a[])
@@ -53,8 +43,8 @@ class Main
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter the Rollno,Name,Marks to be included in academics:");
     int rollno = sc.nextInt();
-    //sc.next();
-    String name = sc.nextLine();
+    sc.nextLine();
+    String name = sc.next();
     int mark = sc.nextInt();
     System.out.println("Enter the sports name and score :");
     String sport_name = sc.next();

@@ -41,7 +41,7 @@ class Teacher extends Employee
 
     public void display()
     {
-       
+        System.out.println("-----------------------------");
         System.out.println("EmpId:"+EmpId);
         System.out.println("Empname:"+Empname);
         System.out.println("Salary:"+Salary);
@@ -64,7 +64,7 @@ class Main
         for(int i =0;i<n;i++)
         {
            
-            System.out.println("Enter the Empid,Empname,Salary");
+            System.out.println("Enter the Empid,Empname,Salary of employee"+(i+1));
             int empid = in.nextInt();
             String empname = in.next();
             float salary = in.nextFloat();

@@ -69,14 +69,9 @@ class Shape
                     break;
                 default:
                     System.out.println("Invalid choice");
-
             }
-          
-
         }while(c!=0);
         sc.close();
-    }
-        
-
+    }    
 }
 

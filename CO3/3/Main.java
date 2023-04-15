@@ -46,22 +46,14 @@ class Teacher extends Employee
     }
     public void display()
     {
+        System.out.println("------------------------------------------------------");
         System.out.println("\nName:"+Name+"\nGender:"+Gender+"\nAddress:"+Address+"\nAge:"+Age+"\nEmpid:"+Empid);
         System.out.println("Company Name:"+Company_name+"\nQualification:"+Qualification+"\nSalary:"+Salary);
         System.out.println("Subject:"+Subject+"\nDepartment"+Department+"\nTeacherId:"+Teacherid);
-        
-    
     }
-   
-    
 }
-
-
-
-
 class Main 
  {
-
     public static void main(String a[])  
     {
         Scanner sc = new Scanner(System.in);
@@ -75,21 +67,20 @@ class Main
             String name = sc.next();
             char gender =  sc.next().charAt(0);
             String address = sc.next();
+            sc.nextLine();
             int age = sc.nextInt();
             System.out.println("Enter the empid,company name,qualification,salary,subject:");
             int empid = sc.nextInt();
             sc.nextLine();
             String cmpny = sc.nextLine();
             String qual = sc.next();
-            Float salary =
-             sc.nextFloat();
+            Float salary = sc.nextFloat();
             sc.nextLine();
             String sub = sc.next();
             System.out.println("Enter the department and teacher id:");
             String dep = sc.next();
             int id = sc.nextInt();
             t[i] = new Teacher(name,gender,address,age,empid,cmpny,qual,salary,sub,dep,id);
-
         }
 
         System.out.println("\nDisplaying details:\n");
@@ -98,7 +89,5 @@ class Main
             t[i].display();
             System.out.println();
         }
-
-
     }
 }

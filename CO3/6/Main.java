@@ -1,6 +1,4 @@
 import java.util.*;
-
-import javax.lang.model.util.ElementScanner14;
 interface AP
 {
     void area();
