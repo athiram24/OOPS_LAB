@@ -8,9 +8,10 @@ class Bill implements Samplecalc
     int prodId;
     String prodname;
     int quantity;
-    float unitprice;
-    float total;
-    public Bill(int prodId, String prodname,int  quantity, float unitprice) {
+    int unitprice;
+    int total;
+    public Bill(int prodId, String prodname,int  quantity, int unitprice)
+     {
         this.prodId = prodId;
         this.prodname = prodname;
         this.quantity = quantity;
@@ -18,7 +19,8 @@ class Bill implements Samplecalc
     }
     public void calculate() 
     {
-       System.out.println("Total price:\t"+ quantity*unitprice+" rupees only");
+        total = quantity*unitprice;
+        System.out.println("Total price:\t"+ total+" rupees only");
     }
     public void view()
     {
@@ -27,20 +29,22 @@ class Bill implements Samplecalc
         System.out.println("Quantity:\t"+quantity);
         System.out.println("Unit price:\t"+unitprice);
         calculate();
-    }
+    } 
 }
+
 class Main
 {
     public static void main(String a[])
     {
+        int netamt=0;
         Scanner sc = new Scanner(System.in);
+        int i;
         System.out.println("Enter the number of products you want to enter:");
         int n = sc.nextInt();
         Bill b[] = new Bill[n];
         System.out.println("Enter the product details:");
-        for(int i=0;i<n;i++)
+        for(i=0;i<n;i++)
         {
-           
             System.out.print("\nProduct Id:");
             int Id = sc.nextInt();
             sc.nextLine();
@@ -49,14 +53,17 @@ class Main
             System.out.print("Quantity:");
             int  quantity = sc.nextInt();
             System.out.print("Unit price:");
-            float price = sc.nextFloat();
+            int price = sc.nextInt();
             b[i] = new Bill(Id,name,quantity,price);
         }
         System.out.println("Displaying the product  details:");
-        for(int i=0;i<n;i++)
+        for(i=0;i<n;i++)
         {
-            System.out.print("\n---------------------------\n");
-            b[i].view();  
+            System.out.println("-------------------------------\n");
+            b[i].view();
+            netamt += b[i].total;
         }
+        System.out.println("---------------------------------\n");
+        System.out.print("Net.Amount: "+ netamt +" rupees only");
     }
 }
