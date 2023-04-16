@@ -5,7 +5,6 @@ public class Triangle
     {
         int ar = (int) (0.5*b*h);
         System.out.println("Area of Triangle :"+ar);
-
     }
 }
 

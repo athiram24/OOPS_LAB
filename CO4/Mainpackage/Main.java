@@ -1,13 +1,12 @@
 package Mainpackage;
 import java.util.Scanner;
-import Mainpackage.graphics.*;//importing all the classes inside the package
-interface AREA
-{
-    void arearect();
-    void areatri();
-    void areasq();
-    void areacirc();
-}
+import Mainpackage.graphics.Circle;
+import Mainpackage.graphics.Rectangle;
+import Mainpackage.graphics.Square;
+import Mainpackage.graphics.Triangle;
+
+
+//importing all the classes inside the package.
 class Main
 {
     public static void main(String[] args) 
@@ -43,9 +42,7 @@ class Main
                     cir.areacirc(r);
                     break;
             default: System.out.println("Invalid entry:");
-
         }
-
     }while(c!=0);
 }
 }

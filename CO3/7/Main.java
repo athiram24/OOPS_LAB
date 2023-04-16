@@ -20,14 +20,13 @@ class Bill implements Samplecalc
     public void calculate() 
     {
         total = quantity*unitprice;
-        System.out.println("Total price:\t"+ total+" rupees only");
+        System.out.print(" \t\t "+ total+"\n");
     }
     public void view()
     {
-        System.out.println("\nProduct Id:\t"+prodId);
-        System.out.println("Product Name:\t"+prodname);
-        System.out.println("Quantity:\t"+quantity);
-        System.out.println("Unit price:\t"+unitprice);
+        
+        System.out.print("\n"+prodId+" \t\t "+prodname+" \t\t  "+ quantity+" \t\t  "+ unitprice);
+        
         calculate();
     } 
 }
@@ -56,14 +55,16 @@ class Main
             int price = sc.nextInt();
             b[i] = new Bill(Id,name,quantity,price);
         }
-        System.out.println("Displaying the product  details:");
+        System.out.println("\nDisplaying the product  details:");
+        System.out.println("Product Id \t Product Name \t Quantity \t Unit price \t Total Price");
+        System.out.println("-------------------------------------------------------------------\n");
         for(i=0;i<n;i++)
         {
-            System.out.println("-------------------------------\n");
+           
             b[i].view();
             netamt += b[i].total;
         }
-        System.out.println("---------------------------------\n");
-        System.out.print("Net.Amount: "+ netamt +" rupees only");
+        System.out.println("---------------------------------------------------------------------\n");
+        System.out.print("Net.amount: "+ netamt +" rupees only");
     }
 }
