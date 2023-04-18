@@ -1,10 +1,7 @@
 package Mainpackage;
-import java.util.Scanner;
-import Mainpackage.graphics.Circle;
-import Mainpackage.graphics.Rectangle;
-import Mainpackage.graphics.Square;
-import Mainpackage.graphics.Triangle;
 
+import java.util.Scanner;
+import Mainpackage.graphics.*;
 
 //importing all the classes inside the package.
 class Main
@@ -22,24 +19,24 @@ class Main
             case 1: System.out.println("Enter the Length and breadth for Rectangle:");
                     int l = sc.nextInt();
                     int b = sc.nextInt();
-                    Rectangle rec = new Rectangle();
-                    rec.arearec(l,b);
+                    Rectangle rec = new Rectangle(l, b);
+                    rec.area();
                     break;
             case 2: System.out.println("Enter the Breadth and height for the triangle:");
                     int bredth = sc.nextInt();
                     int h = sc.nextInt();
-                    Triangle tri = new Triangle();
-                    tri.areatri(bredth,h);
+                    Triangle tri = new Triangle(bredth,h);
+                    tri.area();
                     break;
             case 3: System.out.println("Enter the side of square:");
                     int s = sc.nextInt();
-                    Square sq = new Square();
-                    sq.areasq(s);
+                    Square sq = new Square(s);
+                    sq.area();
                     break;
             case 4: System.out.println("Enter the radius of the circle:");
                     float r = sc.nextFloat();
-                    Circle cir = new Circle();
-                    cir.areacirc(r);
+                    Circle cir = new Circle(r);
+                    cir.area();
                     break;
             default: System.out.println("Invalid entry:");
         }

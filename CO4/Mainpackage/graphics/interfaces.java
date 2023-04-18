@@ -1,8 +1,5 @@
 package Mainpackage.graphics;
-interface AREA
+interface Area
 {
-    void arearect();
-    void areatri();
-    void areasq();
-    void areacirc();
+    void area();
 }

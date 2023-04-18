@@ -37,7 +37,7 @@ class Functions
     }
     public void Stringreplace(String str,char s1,char s2)
     {
-        System.out.println("Replace is:"+ str.replace(s1,s2));//
+        System.out.println("Replace is:"+ str.replace(s1,s2));
     }
 
 
