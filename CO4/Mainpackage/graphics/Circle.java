@@ -2,7 +2,6 @@ package Mainpackage.graphics;
 public class Circle implements Area
 {
     float r;
-    
     public Circle(float r)
     {
         this.r = r;

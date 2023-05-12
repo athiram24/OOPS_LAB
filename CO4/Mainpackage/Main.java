@@ -1,5 +1,4 @@
 package Mainpackage;
-
 import java.util.Scanner;
 import Mainpackage.graphics.*;
 
