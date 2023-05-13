@@ -1,7 +1,6 @@
 import java.util.*;
 class Authentication 
 {
-    
     private String username;
     private String password;
     public Authentication(String username, String password)
@@ -11,15 +10,12 @@ class Authentication
     }
     public void check()
     {
-        if(!username && !password)
-        {
+       
 
-        }
+
+
+
     }
-
-    
-
-
 }
 class Main
 
@@ -31,9 +27,6 @@ class Main
         String username = sc.nextLine();
         String password = sc.nextLine();
         Authentication user = new Authentication(username,password);
-
-        
-
-
+        sc.close();
     }
 }
