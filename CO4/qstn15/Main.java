@@ -56,9 +56,6 @@ class  Main
            
             System.out.println(IT.next());
         }
-
-
-        
         sc.close();
 
     }

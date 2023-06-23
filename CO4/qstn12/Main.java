@@ -7,7 +7,6 @@ class Main
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of  elements");
         int n = sc.nextInt();
-      
         Stack <Integer>list = new Stack<>();
         //adding elements.......
           for(int i=0;i<n;i++)
@@ -19,7 +18,6 @@ class Main
         //Removing elements.....
         list.pop();
         System.out.println("List after removing last element:"+list);
-
         int val = list.peek();//returns peek value ie value at the top
         System.out.println("Value at the top: "+val);
 

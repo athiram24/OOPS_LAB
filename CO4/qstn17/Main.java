@@ -30,7 +30,6 @@ class Main
         String str = sc.nextLine();
         map.replace(k,str);
         System.out.println("after updation:"+map);
-
         //to get values of the given key
         System.out.println("Enter a key to find the value:");
         int k1 = sc.nextInt();
@@ -42,8 +41,6 @@ class Main
         else{
             System.out.println("not found");
         }
-
-
         //remove elements
         sc.nextLine();
         System.out.println("Enter the key to be deleted:");
