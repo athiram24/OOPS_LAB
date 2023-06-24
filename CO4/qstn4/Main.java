@@ -8,7 +8,6 @@ class Userexception extends Exception
 }
 class Main
 {
-
     public static void main(String a[])
     {
         int n,num,avg;
@@ -38,7 +37,6 @@ class Main
         {
             System.out.println(e);
         }
-       
         sc.close();
            
     
