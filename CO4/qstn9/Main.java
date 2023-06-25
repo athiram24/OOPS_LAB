@@ -23,7 +23,6 @@ class BubbleSort<T extends Comparable<T>>
 
             }
         }
-
     }
     public T[] getSortedArray()
     {
