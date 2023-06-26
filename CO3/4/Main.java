@@ -28,7 +28,8 @@ class Literature extends Book
 {
     //String Bookname;
     String literature_type;
-    String language;
+    String languag
+    e;
     public Literature(String publisher_name, String title, String author, Float price,  String literature_type, 
     String language)
      {

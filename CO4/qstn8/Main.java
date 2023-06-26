@@ -1,9 +1,4 @@
 import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner14;
-
-import java.util.List;
-import java.util.EmptyStackException;
 import java.util.ArrayList;
 class Trystack<T>
 {
@@ -26,8 +21,9 @@ class Trystack<T>
         else
         {
             index = (list.size()-1); 
+            System.out.println(list.get(index)+" Removed!");
             System.out.println(list.remove(index));
-            System.out.println(list.get(index)+"Removed!");
+        
         }  
 
     }
@@ -67,19 +63,19 @@ class Main
                 int ch = sc.nextInt();
                 switch(ch)
                 {
-                    case 1 ->{
+                    case 1 :{
                                 System.out.println("Enter the value");
                                 int item = sc.nextInt();
                                 stack.push(item);
                                 break;
 
                             }
-                    case 2 ->{
+                    case 2 :{
                             
                                 stack.pop();
                                 break;
                             }
-                    case 3 ->{
+                    case 3 :{
                                 try
                                 {
                                 stack.peek();
@@ -90,7 +86,7 @@ class Main
                                 }
                                 break;
                             }
-                    case 4 ->{
+                    case 4 :{
                                 stack.display();
                                 break;
                             }
@@ -106,22 +102,23 @@ class Main
                 int ch = sc.nextInt();
                 switch(ch)
                 {
-                    case 1 ->{
+                    case 1 :{
+                                sc.nextLine();
                                 System.out.println("Enter the value");
                                 String item = sc.nextLine();
                                 stack.push(item);
                                 break;
 
                             }
-                    case 2 ->{
+                    case 2 :{
                                 stack.pop();
                                 break;
                             }
-                    case 3 ->{
+                    case 3 :{
                                 stack.peek();
                                 break;
                             }
-                    case 4 ->{
+                    case 4 :{
                                 stack.display();
                                 break;
                             }
