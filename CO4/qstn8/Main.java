@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import javax.lang.model.util.ElementScanner14;
+
 import java.util.List;
 import java.util.EmptyStackException;
 import java.util.ArrayList;
@@ -31,10 +34,16 @@ class Trystack<T>
     public void peek()
     {
         T topvalue;
-        System.out.println("Size :"+list.size());
+        if(list.isEmpty())
+        {
+            System.out.println("stack is empty:");
+        }
+        else
+        {
+            topvalue = list.get(list.size() - 1);
+            System.out.println("Top value: " + topvalue);
+        }
         
-        topvalue = list.get(list.size());
-        System.out.println("Topvalue :"+topvalue);
     }
     public void display()
     {
