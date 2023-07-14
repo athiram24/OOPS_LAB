@@ -16,13 +16,13 @@ public class Main
         
         switch(c)
         {
-                case 1  -> {
+                case 1  : {
                         System.out.println("Enter the value:");
                         int item = sc.nextInt();
                         list.add(item);
                         break;
                         }
-                case 2  ->{
+                case 2  : {
                         System.out.println("Enter the index value:\n");
                         int index = sc.nextInt();
                         System.out.println("Enter the data :");

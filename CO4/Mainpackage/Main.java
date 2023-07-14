@@ -11,8 +11,7 @@ class Main
         Scanner sc = new Scanner(System.in);
         do
         {
-                System.out.println("Choose the figure:\n1
-                1.Rectangle\n2.Triangle\n3.Square\n4.Circle\n");
+                System.out.println("Choose the figure:\n1.Rectangle\n2.Triangle\n3.Square\n4.Circle\n");
                 c = sc.nextInt();
                 switch(c)
                 {

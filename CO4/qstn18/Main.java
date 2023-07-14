@@ -17,7 +17,7 @@ class Main
             String val = sc.nextLine();
             hash.put(key,val);
 
-        }
+        }    
         System.out.println("Hashmap after insertion:");
         for (Map.Entry<Integer, String> entry : hash.entrySet()) 
         {
