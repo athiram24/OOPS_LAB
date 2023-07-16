@@ -1,5 +1,4 @@
 package Mainpackage.graphics;
-
 public class Rectangle
 {
     int l;

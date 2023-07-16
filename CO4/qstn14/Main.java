@@ -63,7 +63,6 @@ class Main
                             break;
 
                         }
-            
                 } 
         }while(c!=0);
     sc.close();   

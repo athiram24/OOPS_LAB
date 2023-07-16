@@ -11,6 +11,5 @@ public class Square
         System.out.println("Area of Square :"+ar);
 
     }
-
 }
 

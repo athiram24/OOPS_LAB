@@ -12,6 +12,4 @@ public class Addition
         int num = a+b;
         System.out.println("Result = "+num);
     }
-
-
 }

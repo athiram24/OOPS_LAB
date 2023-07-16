@@ -17,9 +17,7 @@ class Main
             queue.offer(sc.nextInt());
         }
         // It print values in minheap order...ie...smaller one will come first.
-      
         int value = queue.peek();//returns value at top
-
         System.out.println("HEAD :"+value);
         System.out.println(queue);
         //Removing elements.....
@@ -35,7 +33,6 @@ class Main
             System.out.println("Queue after deletion:");
             System.out.println(it.next());
         }
-
         sc.close();
     }
 }

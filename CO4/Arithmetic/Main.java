@@ -33,8 +33,6 @@ class Main
 
                 }
         }while(c!=0);
-
     sc.close(); 
-    }
-    
+    } 
 }

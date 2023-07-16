@@ -35,7 +35,6 @@ class Authentication
         {
             System.out.println(e);
         }
-
        
     }
 }
@@ -57,4 +56,4 @@ class Main
         user.check(userid,pass);
         sc.close();
     }
-}
+}  

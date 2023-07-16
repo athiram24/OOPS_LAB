@@ -48,8 +48,6 @@ class Buffer
         notifyAll();//notifies the producer to producer
      }
 }
-
-    
 class Producer implements Runnable
 {
     private Buffer buffer;
@@ -67,8 +65,7 @@ class Producer implements Runnable
         buffer.produce(i);
        }
         
-    }
-    
+    } 
 }
 class Consumer implements Runnable
  {
@@ -78,8 +75,6 @@ class Consumer implements Runnable
     {
         this.buffer = buffer;
     }
-
-    @Override
     public void run() 
     {
         for (int i = 1; i <= 10; i++) 
@@ -111,5 +106,4 @@ class Main
         }
     sc.close();
     }
-
 }

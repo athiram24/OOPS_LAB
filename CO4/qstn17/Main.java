@@ -15,7 +15,7 @@ class Main
                 c = sc.nextInt();
                 switch(c)
                 {
-                    case 1:{
+                    case 1:
                                 System.out.println("How many key-value pair to be inserted:");
                                 int n = sc.nextInt();
                                 //Adding elements as key-value pair.
@@ -29,24 +29,20 @@ class Main
                                     map.put(k,value);
                                 }
                                 break;
-                            }
-                    case 2:{
+                    case 2:
                                 for(Map.Entry<Integer, String> e: map.entrySet())
                                 {
                                     System.out.println(e.getKey()+" : "+ e.getValue());
                                 }
                                 break;
-                            }
-
-                    case 3:{
+                    case 3:
                                 System.out.println("Enter the key to be updated:");
                                 k = sc.nextInt();
                                 System.out.println("Enter the value:");
                                 str = sc.next();
                                 map.replace(k,str);
                                 break;
-                           }
-                    case 4:{
+                    case 4:
                                 System.out.println("Enter a key to find the value:");
                                 k1 = sc.nextInt();
                                 if(map.containsKey(k1))
@@ -59,14 +55,13 @@ class Main
                                     System.out.println("not found");
                                 }   
                                 break;
-                            }
-                    case 5:{
+                    case 5:
                                 System.out.println("\nEnter key to remove: ");
                                 k = sc.nextInt();
                                 System.out.println(map.get(k)+" Removed!...");
                                 map.remove(k);
                                 break;
-                           }   
+                            
                 }
             }while(c!=0);
         sc.close();

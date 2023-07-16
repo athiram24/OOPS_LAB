@@ -20,13 +20,18 @@ class Main
         System.out.println("List after removing last element:"+list);
         int val = list.peek();//returns peek value ie value at the top
         System.out.println("Value at the top: "+val);
-
         //Removing elements by specifying index....
         System.out.println("Enter the index to remove the value: ");
         int num = sc.nextInt();
+        if(num>0 && num<list.size())
+        {
         list.remove(num);
         System.out.println("After removal ..."+list);
-
+        }
+        else
+        {
+          System.out.println("Invalid index:");
+        }
         sc.close();
     }
 }

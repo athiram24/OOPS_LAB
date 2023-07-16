@@ -13,6 +13,4 @@ public class Subraction
         System.out.println("Result = "+num);
     }
     
-
-    
 }

@@ -23,8 +23,6 @@ class Main
         {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
-    
-
         //converting all values to treemap....ie...hashmap is copying to treemap....
         tree.putAll(hash);
         System.out.println("Tree map after updating:");

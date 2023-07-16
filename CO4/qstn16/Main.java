@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.HashSet;
-
 class Main
 {
 public static void main(String[] args) 
@@ -14,9 +13,7 @@ public static void main(String[] args)
         for(int i=0;i<n1;i++)
         {
             System.out.println("Enter the element:"+i);
-            hash1.add(sc.nextInt());
-            
-            
+            hash1.add(sc.nextInt()); 
         }
      
         System.out.println("How many elements in second list:");
@@ -40,12 +37,6 @@ public static void main(String[] args)
         else{
             System.out.println("Not equal:");
         }
-
         sc.close();
-
-
-
-
-
     }
 }

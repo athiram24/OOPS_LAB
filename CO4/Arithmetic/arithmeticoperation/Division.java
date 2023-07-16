@@ -13,8 +13,5 @@ public class Division
         System.out.println("Result = "+num);
 
     }
-
-  
-    
 }
 
