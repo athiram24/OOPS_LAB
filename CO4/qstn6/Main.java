@@ -20,7 +20,8 @@ class Fibnocci implements Runnable
         b = c;
         c = a+b;
         try {
-            Thread.sleep(30);
+           // Thread.sleep(10);
+        
         } catch (InterruptedException e) {
             
             e.printStackTrace();
@@ -43,7 +44,7 @@ class Even implements Runnable
         {
             System.out.println(i);
              try {
-            Thread.sleep(10);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             
             e.printStackTrace();
