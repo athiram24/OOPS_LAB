@@ -1,12 +1,10 @@
-package qstn1;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 class Main
 {
     public static void main(String[] args) throws IOException
-    
     {
-
         Scanner sc = new Scanner(System.in) ;
         String filepath = "C:\\Users\\Admin\\Desktop\\OOPS_LAB";
         File fp = new File(filepath);
@@ -20,7 +18,6 @@ class Main
                 System.out.println(f.getName());//Listing files.....
                 
             }
-
             System.out.println("Enter a filename to search:");
             String file_name = sc.next();
             for(File f : files)
@@ -30,7 +27,6 @@ class Main
                     System.out.println(file_name+" Found");
                     bool = false;
                 }
-            
             }
             if(bool == true)
             {

@@ -14,24 +14,14 @@ public class Main
         c = sc.nextInt();
         switch(c)
         {
-<<<<<<< HEAD
                 case 1  : 
-=======
-                case 1  : {
->>>>>>> 68895cebbf5da93699d8515071b6f4d3f9df8cf4
                         System.out.println("Enter the value:");
                         int item = sc.nextInt();
                         list.add(item);
                         break;
-<<<<<<< HEAD
                         
                 case 2  :
                         System.out.println("Enter the index value:");
-=======
-                        }
-                case 2  : {
-                        System.out.println("Enter the index value:\n");
->>>>>>> 68895cebbf5da93699d8515071b6f4d3f9df8cf4
                         int index = sc.nextInt();
                         System.out.println("Enter the data :");
                         int value = sc.nextInt();

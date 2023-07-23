@@ -27,11 +27,12 @@ class Main
         {
         queue.poll();//Removes first one since it follows FIFO
         }
+        System.out.println("Queue after deletion:");
         Iterator<Integer> it = queue.iterator();//iterator is used to iterate over the elements and print the value
         while(it.hasNext())
         {
-            System.out.println("Queue after deletion:");
-            System.out.println(it.next());
+            
+            System.out.print("\t"+it.next());
         }
         sc.close();
     }
