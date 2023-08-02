@@ -1,40 +1,56 @@
-import java.io.File;
-import java.io.IOException;
-import java.util.Scanner;
-class Main
+package qstn1;
+import java.io.*;
+public class Main 
 {
-    public static void main(String[] args) throws IOException
-    {
-        Scanner sc = new Scanner(System.in) ;
-        String filepath = "C:\\Users\\Admin\\Desktop\\OOPS_LAB";
-        File fp = new File(filepath);
-        boolean bool = true;
-        if(fp.exists()&&fp.isDirectory())
-        {
-            File files[] = fp.listFiles();
-            System.out.println("Directory:");
-            for(File f : files)
-            {
-                System.out.println(f.getName());//Listing files.....
-                
-            }
-            System.out.println("Enter a filename to search:");
-            String file_name = sc.next();
-            for(File f : files)
-            {
-                if(f.getName().equals(file_name)) //searching file
-                {
-                    System.out.println(file_name+" Found");
-                    bool = false;
-                }
-            }
-            if(bool == true)
-            {
-                System.out.println("Not found:");
-                
-            }
-        }
-        sc.close();
-
-    }
+	public static void main(String a[])
+	{
+		String path = "C:\\Users\\adhim\\OneDrive\\Desktop\\OOPS_LAB\\CO6";
+		File fp = new File(path);
+		System.out.println("Listing files in :"+fp.getName());
+		
+		List(fp);
+		String item = "Hello.txt";//to search this file
+		search(fp,item);
+		
+	
+	}
+	public static void List(File f)
+	{
+		File[] files = f.listFiles();
+		for(File file : files)
+		{
+			if(file.isFile())
+			{
+				System.out.println(file.getName());
+			}
+			else if(file.isDirectory())
+			{
+				System.out.println("SubDirectory:"+file.getName());
+				List(file);
+			}
+		}
+		
+	}
+	public static boolean search(File f,String item)
+	{
+		File[] files = f.listFiles();
+		for(File file:files)
+		{
+			if(file.isDirectory())
+			{
+				search(file,item);
+				
+			}
+			else if(file.isFile())
+			{
+				if(file.getName().equals(item))
+				{
+					System.out.println(item+"found at "+file.getAbsolutePath());
+					return true;
+				}
+			}
+		}
+		return false;
+		
+	}
 }
